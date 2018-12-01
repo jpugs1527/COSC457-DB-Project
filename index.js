@@ -18,6 +18,10 @@ app.get("/login.html", function(req, res) {
   res.sendFile(__dirname + "/" + "login.html");
 });
 
+app.get("/register.html", function(req, res) {
+  res.sendFile(__dirname + "/" + "register.html");
+});
+
 /* route to handle login and registration */
 app.post("/api/register", registerController.register);
 app.post("/api/authenticate", authenticateController.authenticate);
@@ -28,4 +32,4 @@ app.post(
   "/controllers/authenticate-controller",
   authenticateController.authenticate
 );
-app.listen(8012);
+app.listen(8080);
